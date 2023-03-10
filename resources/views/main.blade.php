@@ -20,24 +20,26 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="col-md-8 col-12 offset-md-2">
             <div class="row">
                 <div class="col-md-12 col-12">
-                    <div class="text-center">
+                <div class="text-center">
+                        <h1 class="error-title">Benvenuto</h1>
+                        <p class="fs-5 text-gray-600">Seleziona qualsiasi gioco</p>
                         <div class="row">
                             <div class="col-md-6 col-6">
-                                <iframe src="/main" height="500" width="100%" title="Iframe Example"></iframe>
+                                <img src="{{ asset('images/blank-img.jpg') }}">
                             </div>
                             <div class="col-md-6 col-6">
-                                <iframe src="/main" height="500" width="100%" title="Iframe Example"></iframe>
+                                <img src="{{ asset('images/blank-img.jpg') }}">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-6">
-                                <iframe src="/main" height="500" width="100%" title="Iframe Example"></iframe>
+                                <img src="{{ asset('images/blank-img.jpg') }}">
                             </div>
                             <div class="col-md-6 col-6">
-                                <iframe src="/main" height="500" width="100%" title="Iframe Example"></iframe>
+                                <img src="{{ asset('images/blank-img.jpg') }}">
                             </div>
                         </div>
                     </div>
