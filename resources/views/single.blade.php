@@ -20,26 +20,26 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class="col-md-8 col-12 offset-md-2">
+        <div class="col-md-6 col-12 offset-md-3">
             <div class="row">
                 <div class="col-md-12 col-12">
-                <div class="text-center">
+                <div class="text-center boxes">
                         <h1 class="error-title">Benvenuto</h1>
                         <p class="fs-5 text-gray-600">Seleziona qualsiasi gioco</p>
                         <div class="row">
                             <div class="col-md-6 col-6">
-                                <img src="{{ asset('images/blank-img.jpg') }}">
+                                <img src="{{ asset('images/blank-img.jpg') }}" class="img-thumbnail">
                             </div>
                             <div class="col-md-6 col-6">
-                                <img src="{{ asset('images/blank-img.jpg') }}">
+                                <img src="{{ asset('images/blank-img.jpg') }}" class="img-thumbnail">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-6">
-                                <img src="{{ asset('images/blank-img.jpg') }}">
+                                <img src="{{ asset('images/blank-img.jpg') }}" class="img-thumbnail">
                             </div>
                             <div class="col-md-6 col-6">
-                                <img src="{{ asset('images/blank-img.jpg') }}">
+                                <img src="{{ asset('images/blank-img.jpg') }}" class="img-thumbnail">
                             </div>
                         </div>
                     </div>

@@ -20,24 +20,30 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid" style="padding: 0;">
             <div class="row">
                 <div class="col-md-12 col-12">
-                    <div class="text-center">
+                    <div class="text-center main">
                         <div class="row">
                             <div class="col-md-6 col-6">
-                                <iframe src="/main" height="500" width="100%" title="Iframe Example"></iframe>
+                                <div class="row">
+                                    <iframe src="/single" height="500" width="100%" title="Iframe Example" style="transform: rotate(180deg);"></iframe>
+                                </div>
                             </div>
                             <div class="col-md-6 col-6">
-                                <iframe src="/main" height="500" width="100%" title="Iframe Example"></iframe>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-6">
-                                <iframe src="/main" height="500" width="100%" title="Iframe Example"></iframe>
+                                <div class="row">
+                                    <iframe src="/single" height="500" width="100%" title="Iframe Example" style="transform: rotate(180deg);"></iframe>
+                                </div>
                             </div>
                             <div class="col-md-6 col-6">
-                                <iframe src="/main" height="500" width="100%" title="Iframe Example"></iframe>
+                                <div class="row">
+                                    <iframe src="/single" height="500" width="100%" title="Iframe Example"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-6">
+                                <div class="row">
+                                    <iframe src="/single" height="500" width="100%" title="Iframe Example"></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>

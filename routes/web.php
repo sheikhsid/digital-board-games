@@ -14,13 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () { return view('welcome'); });
-Route::get('/main', function () { return view('main'); });
+Route::get('/single', function () { return view('single'); });
 
 Auth::routes();
 
 
 Route::middleware('auth')->group(function () {
 
+    // Route::get('/home',[HomeController::class,'index'])->name('/home');
+    Route::get('/home', function () { return view('home'); });
+
 });
     
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
