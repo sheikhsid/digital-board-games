@@ -21,7 +21,7 @@
     </head>
     <body>
         <div class="container-fluid" style="padding: 0;">
-            <div class="row">
+            <div class="row h-100">
                 <div class="col-md-12 col-12">
                     <div class="text-center main">
                         <div class="row">
