@@ -20,28 +20,16 @@
                                 <span>Dashboard</span>
                             </a>
                         </li>
-
-                        <!-- <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-joystick"></i>
-                                <span>Games</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="component-alert.html">Alert</a>
-                                </li>
-                            </ul>
-                        </li> -->
-
+                        
                         <li class="sidebar-item  ">
-                            <a href="" class='sidebar-link'>
+                            <a href="{{ url('/games') }}" class='sidebar-link'>
                             <i class="bi bi-joystick"></i>
                                 <span>Games</span>
                             </a>
                         </li>
 
                         <li class="sidebar-item  ">
-                            <a href="" class='sidebar-link'>
+                            <a href="{{ url('/players') }}" class='sidebar-link'>
                             <i class="bi bi-people-fill"></i>
                                 <span>Players</span>
                             </a>

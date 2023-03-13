@@ -12,6 +12,7 @@
         <!-- Scripts -->
         <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ asset('css/pages/auth.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendors/datatables/style.css') }}">   
         
         <link rel="stylesheet" href="{{ asset('vendors/bootstrap-icons/bootstrap-icons.css') }}">
         <link rel="stylesheet" href="{{ asset('vendors/iconly/bold.css') }}">
@@ -36,7 +37,13 @@
         <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 
         <script src="{{ asset('vendors/apexcharts/apexcharts.js') }}"></script>
+        <script src="{{ asset('vendors/datatables/datatables.js') }}"></script>
         <script src="{{ asset('js/pages/dashboard.js') }}"></script>
+        <script>
+            // Simple Datatable
+            let table1 = document.querySelector('#table1');
+            let dataTable = new simpleDatatables.DataTable(table1);
+        </script>
 
         <script src="{{ asset('js/main.js') }}"></script>                   
     </body>

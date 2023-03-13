@@ -24,5 +24,11 @@ Route::middleware('auth')->group(function () {
     // Route::get('/home',[HomeController::class,'index'])->name('/home');
     Route::get('/home', function () { return view('home'); });
 
+    Route::get('/home', function () { return view('home'); });
+    Route::get('/games', function () { return view('games'); });
+
+    // Route::get('/games',[Games::class,'viewGames'])->name('/games');
+    Route::post("/game",[Games::class,'addGame'])->name('/game');
+
 });
     

@@ -18,6 +18,7 @@ class CreateGamesTable extends Migration
             $table->string('name');
             $table->string('username');
             $table->string('iframe');
+            $table->string('status');
             $table->timestamps();
         });
     }
