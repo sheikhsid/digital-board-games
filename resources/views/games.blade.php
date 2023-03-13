@@ -113,15 +113,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($games as $game)
                                     <tr>
-                                        <td>Graiden</td>
-                                        <td>semconsequat.co.uk</td>
-                                        <td>Play</td>
+                                        <td>{{$game['name']}}</td>
+                                        <td>{{$game['username']}}</td>
+                                        <td><a href="{{$game['iframe']}}" target="_blank">Play</a></td>
                                         <td>
-                                            <span class="badge bg-success">Active</span>
+                                            <span class="badge bg-success">{{$game['status']}}</span>
                                         </td>
-                                        <td><i class="bi bi-link-45deg"></i></td>
+                                        <td><a href=""><i class="bi bi-link-45deg"></i></a></td>
                                     </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

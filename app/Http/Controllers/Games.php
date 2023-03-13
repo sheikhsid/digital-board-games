@@ -7,6 +7,15 @@ use App\Models\Game;
 
 class Games extends Controller
 {
+    
+    function viewGames(){
+
+        $games= Game::all();
+
+        return view('/games',['games' => $games]);
+
+    }
+    
     //Check validation and add New Request
     function addGame(Request $req){
 
