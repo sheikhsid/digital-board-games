@@ -1,0 +1,17 @@
+{
+    "name": "Digital Board Games",
+    "short_name": "DBG",
+    "start_url": "/",
+    "background_color": "#6777ef",
+    "description": "Board Games",
+    "display": "fullscreen",
+    "theme_color": "#6777ef",
+    "icons": [
+        {
+            "src": "logo.PNG",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
