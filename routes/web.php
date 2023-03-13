@@ -17,19 +17,22 @@ Route::get('/', function () { return view('welcome'); });
 Route::get('/single',[Games::class,'seeGames'])->name('/single');
 Route::post("play",[Games::class,'addPlayer'])->name('play');
 
-Auth::routes();
-// Auth::routes(['register' => false]);
+// Auth::routes();
+Auth::routes(['register' => false]);
 
 
 Route::middleware('auth')->group(function () {
 
-    // Route::get('/home',[HomeController::class,'index'])->name('/home');
     Route::get('/home', function () { return view('home'); });
 
+    //Game Pages
     Route::get('/games',[Games::class,'viewGames'])->name('/games');
     Route::post("game",[Games::class,'addGame'])->name('game');
 
     Route::post("active",[Games::class,'Status'])->name('active');
 
+    //Player Pages
+    Route::get('/players',[Games::class,'viewPlayers'])->name('/players');
+    
 });
     

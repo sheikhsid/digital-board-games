@@ -151,7 +151,7 @@
                                                 </form>
                                             @endif
                                         </td>
-                                        <td><a href=""><i class="bi bi-link-45deg"></i></a></td>
+                                        <td><a href=""><i class="bi bi-trash" style="font-size: 25px;"></i></a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>

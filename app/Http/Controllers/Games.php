@@ -73,4 +73,14 @@ class Games extends Controller
         return redirect('/games');
 
     }
+
+    function viewPlayers(){
+
+        $players= Player::all();
+        $games= Game::all();
+
+        return view('/players',['players' => $players, 'games' => $games]);
+
+    }
+    
 }
