@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Games;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/games', function () { return view('games'); });
 
     // Route::get('/games',[Games::class,'viewGames'])->name('/games');
-    Route::post("/game",[Games::class,'addGame'])->name('/game');
+    Route::post("game",[Games::class,'addGame'])->name('game');
 
 });
     

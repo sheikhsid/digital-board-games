@@ -36,60 +36,57 @@
                             <div class="card">
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <form class="form form-vertical">
+                                        <form method="POST" action="{{ route('game') }}">
+                                        @csrf
                                             <div class="form-body">
                                                 <div class="row">
                                                     <div class="col-md-3 col-12">
                                                         <div class="form-group has-icon-left">
                                                             <label for="first-name-icon">Game Name*</label>
                                                             <div class="position-relative">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Game Name"
-                                                                    id="first-name-icon">
+                                                                <input type="text" class="form-control" placeholder="Game Name" id="first-name-icon" name="name">
                                                                 <div class="form-control-icon">
                                                                     <i class="bi bi-joystick"></i>
                                                                 </div>
                                                             </div>
+                                                            @error('name'){{$message}}@enderror
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 col-12">
                                                         <div class="form-group has-icon-left">
                                                             <label for="email-id-icon">Username</label>
                                                             <div class="position-relative">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Username of the profile" id="email-id-icon">
+                                                                <input type="text" class="form-control" placeholder="Username of the profile" id="first-name-icon" name="username">
                                                                 <div class="form-control-icon">
                                                                     <i class="bi bi-person"></i>
                                                                 </div>
                                                             </div>
+                                                            @error('username'){{$message}}@enderror
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 col-12">
                                                         <div class="form-group has-icon-left">
                                                             <label for="mobile-id-icon">Game URL*</label>
                                                             <div class="position-relative">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Game URL (Iframe)" id="mobile-id-icon">
+                                                                <input type="text" class="form-control" placeholder="Game URL (Iframe)" id="mobile-id-icon" name="iframe">
                                                                 <div class="form-control-icon">
                                                                     <i class="bi bi-link-45deg"></i>
                                                                 </div>
                                                             </div>
+                                                            @error('iframe'){{$message}}@enderror
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 col-12">
                                                         <div class='form-check'>
                                                             <div class="checkbox mt-2">
-                                                                <input type="checkbox" id="remember-me-v"
-                                                                    class='form-check-input'>
+                                                                <input type="checkbox" id="remember-me-v" class='form-check-input' name="status">
                                                                 <label for="remember-me-v">Active</label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-6 d-flex justify-content-end">
-                                                        <button type="submit"
-                                                            class="btn btn-primary me-1 mb-1">Submit</button>
-                                                        <button type="reset"
-                                                            class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                                                        <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                                                        <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -112,16 +109,18 @@
                                         <th>Account Username</th>
                                         <th>Game URL</th>
                                         <th>Status</th>
+                                        <th>Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>Graiden</td>
                                         <td>semconsequat.co.uk</td>
-                                        <td>076 4820 8838</td>
+                                        <td>Play</td>
                                         <td>
                                             <span class="badge bg-success">Active</span>
                                         </td>
+                                        <td><i class="bi bi-link-45deg"></i></td>
                                     </tr>
                                 </tbody>
                             </table>
