@@ -1282,6 +1282,7 @@ a {
 }.text-center.boxes {
     padding: 30px 0;
 }.main iframe {
+    padding: 80px 0;
     border: 3px solid #e5e8ed;
 }html, body {
     height: 100%;

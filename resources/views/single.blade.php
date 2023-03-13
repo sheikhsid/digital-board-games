@@ -18,6 +18,18 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <style>
+            html, body {
+                margin: 0; 
+                height: 100%; 
+                overflow: hidden
+            }h1.error-title {
+                font-size: 80px;
+            }
+            .text-gray-600 {
+                font-size: 35px !important;
+            }
+        </style>
     </head>
     <body>
         <div class="col-md-6 col-12 offset-md-3">

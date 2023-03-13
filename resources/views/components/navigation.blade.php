@@ -15,28 +15,35 @@
                         <li class="sidebar-title">Menu</li>
 
                         <li class="sidebar-item active ">
-                            <a href="index.html" class='sidebar-link'>
+                            <a href="{{ url('/home') }}" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Dashboard</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-item  has-sub">
+                        <!-- <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
-                                <i class="bi bi-stack"></i>
-                                <span>Components</span>
+                                <i class="bi bi-joystick"></i>
+                                <span>Games</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
                                     <a href="component-alert.html">Alert</a>
                                 </li>
                             </ul>
+                        </li> -->
+
+                        <li class="sidebar-item  ">
+                            <a href="" class='sidebar-link'>
+                            <i class="bi bi-joystick"></i>
+                                <span>Games</span>
+                            </a>
                         </li>
 
                         <li class="sidebar-item  ">
-                            <a href="https://github.com/zuramai/mazer#donate" class='sidebar-link'>
-                                <i class="bi bi-cash"></i>
-                                <span>Donate</span>
+                            <a href="" class='sidebar-link'>
+                            <i class="bi bi-people-fill"></i>
+                                <span>Players</span>
                             </a>
                         </li>
                         <li class="sidebar-item  ">
