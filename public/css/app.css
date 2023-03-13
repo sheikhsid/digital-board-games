@@ -1278,15 +1278,22 @@ a {
 
 .boxes img {
     width: 100%;
-    margin-top: 20px;
 }.text-center.boxes {
-    padding: 30px 0;
+    padding: 100px 0;
 }.main iframe {
-    padding: 80px 0;
     border: 3px solid #e5e8ed;
 }html, body {
     height: 100%;
     background-color: #f2f7ff;
 }.text-center.main {
     width: 100%;
+}a.cancel-icon {
+    position: absolute;
+    bottom: 35px;
+    font-size: 58px;
+    height: 50px;
+    right: 6px;
+    color: #d0d0d0;
+}a.cancel {
+    position: absolute;
 }

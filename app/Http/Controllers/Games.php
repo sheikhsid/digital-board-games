@@ -4,10 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Game;
+use App\Models\Player;
 
 class Games extends Controller
 {
+
+    /*Player Area*/
+
+    function seeGames(){
+
+        $games= Game::all()->where('status','on');
+
+        return view('/single',['games' => $games]);
+
+    }
+
+    function addPlayer(Request $req){
+
+        $game= new Player;
+        $game->game_id=$req->game_id;
+        $game->ip_address=request()->ip();
+        $game->save();
+
+        $play= Game::all()->where('id',$game->game_id)->first();
+
+        // return redirect('/play/'.$game->game_id);
+        return view('/play',['play' => $play]);
+
+    }
     
+    /*Admin Area*/
+
     function viewGames(){
 
         $games= Game::all();
@@ -16,7 +43,6 @@ class Games extends Controller
 
     }
     
-    //Check validation and add New Request
     function addGame(Request $req){
 
         $req->validate([

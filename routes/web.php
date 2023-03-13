@@ -14,7 +14,8 @@ use App\Http\Controllers\Games;
 */
 
 Route::get('/', function () { return view('welcome'); });
-Route::get('/single', function () { return view('single'); });
+Route::get('/single',[Games::class,'seeGames'])->name('/single');
+Route::post("play",[Games::class,'addPlayer'])->name('play');
 
 Auth::routes();
 

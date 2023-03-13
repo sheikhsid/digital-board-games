@@ -39,20 +39,17 @@
                         <h1 class="error-title">Benvenuto</h1>
                         <p class="fs-5 text-gray-600">Seleziona qualsiasi gioco</p>
                         <div class="row">
+                        @foreach($games as $game)
                             <div class="col-md-6 col-6">
-                                <img src="{{ asset('images/blank-img.jpg') }}" class="img-thumbnail">
+                                <form method="POST" action="{{ route('play') }}">
+                                @csrf
+                                <input type="hidden" name="game_id" value="{{$game['id']}}"></br>
+                                <button type="submit" class="btn me-1 mb-1">
+                                    <img src="{{ asset('images/blank-img.jpg') }}" class="img-thumbnail">
+                                </button>
+                                </form>
                             </div>
-                            <div class="col-md-6 col-6">
-                                <img src="{{ asset('images/blank-img.jpg') }}" class="img-thumbnail">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-6">
-                                <img src="{{ asset('images/blank-img.jpg') }}" class="img-thumbnail">
-                            </div>
-                            <div class="col-md-6 col-6">
-                                <img src="{{ asset('images/blank-img.jpg') }}" class="img-thumbnail">
-                            </div>
+                        @endforeach
                         </div>
                     </div>
                 </div>    
