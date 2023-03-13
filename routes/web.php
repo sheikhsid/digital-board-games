@@ -23,7 +23,7 @@ Auth::routes(['register' => false]);
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/home', function () { return view('home'); });
+    Route::get('/home',[Games::class,'Dashboard'])->name('/home');
 
     //Game Pages
     Route::get('/games',[Games::class,'viewGames'])->name('/games');

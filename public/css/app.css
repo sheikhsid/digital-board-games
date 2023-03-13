@@ -189,8 +189,8 @@
     background-color: #fff;
 }
 .btn.btn-light-primary {
-    background-color: #ebf3ff;
-    color: #002152;
+    background-color: #46554e;
+    color: #ffffff;
 }
 .btn.btn-light-secondary {
     background-color: #e6eaee;
@@ -1281,7 +1281,7 @@ a {
 }.text-center.boxes {
     padding: 100px 0;
 }.main iframe {
-    border: 3px solid #e5e8ed;
+    border: 3px solid #415450;
 }html, body {
     height: 100%;
     background-color: #dbbc85;

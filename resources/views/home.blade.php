@@ -92,7 +92,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <h6 class="text-muted font-semibold">Games</h6>
-                                                <h6 class="font-extrabold mb-0">{{ App\Models\Game::count() }}</h6>
+                                                <h6 class="font-extrabold mb-0">0{{ App\Models\Game::count() }}</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -111,51 +111,19 @@
                                             <table class="table table-hover table-lg">
                                                 <thead>
                                                     <tr>
-                                                        <th>Name</th>
-                                                        <th>Comment</th>
+                                                        <th>Game Name</th>
+                                                        <th>Account Username</th>
+                                                        <th>Game URL</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                @foreach($games as $game)
                                                     <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold mb-0">Si Cantik</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">Congratulations on your graduation!</p>
-                                                        </td>
+                                                        <td>{{$game['name']}}</td>
+                                                        <td>{{$game['username']}}</td>
+                                                        <td><a href="{{$game['iframe']}}" target="_blank">Play</a></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold mb-0">Si Cantik</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">Congratulations on your graduation!</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold mb-0">Si Cantik</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">Congratulations on your graduation!</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold mb-0">Si Cantik</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">Congratulations on your graduation!</p>
-                                                        </td>
-                                                    </tr>
+                                                @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
@@ -173,7 +141,7 @@
                                     </div>
                                     <div class="ms-3 name">
                                         <h5 class="font-bold">{{ Auth::user()->name }}</h5>
-                                        <h6 class="text-muted mb-0">{{ Auth::user()->email }}</h6>
+                                        <h6 class="text-muted mb-0"><a href="mailto:{{ Auth::user()->email }}">{{ Auth::user()->email }}</a></h6>
                                     </div>
                                 </div>
                             </div>
@@ -183,36 +151,25 @@
                                 <h4>List of Players</h4>
                             </div>
                             <div class="card-content pb-4">
+                                @foreach($players as $player)
                                 <div class="recent-message d-flex px-4 py-3">
                                     <div class="avatar avatar-lg">
-                                        <img src="assets/images/faces/4.jpg">
+                                        @foreach($games as $game)
+                                            @if ($game['id'] == $player['game_id'])
+                                                
+                                                
+                                        <img src="{{ asset('images/uploads') }}/{{$game['thumbnail']}}">
                                     </div>
                                     <div class="name ms-4">
-                                        <h5 class="mb-1">Hank Schrader</h5>
-                                        <h6 class="text-muted mb-0">@johnducky</h6>
+                                        <h5 class="mb-1">{{$game['name']}}</h5>
+                                            @endif
+                                        @endforeach
+                                        <h6 class="text-muted mb-0"><a href="https://whatismyipaddress.com/ip/{{$player['ip_address']}}" target="_blank">{{$player['ip_address']}}</a></h6>
                                     </div>
                                 </div>
-                                <div class="recent-message d-flex px-4 py-3">
-                                    <div class="avatar avatar-lg">
-                                        <img src="assets/images/faces/5.jpg">
-                                    </div>
-                                    <div class="name ms-4">
-                                        <h5 class="mb-1">Dean Winchester</h5>
-                                        <h6 class="text-muted mb-0">@imdean</h6>
-                                    </div>
-                                </div>
-                                <div class="recent-message d-flex px-4 py-3">
-                                    <div class="avatar avatar-lg">
-                                        <img src="assets/images/faces/1.jpg">
-                                    </div>
-                                    <div class="name ms-4">
-                                        <h5 class="mb-1">John Dodol</h5>
-                                        <h6 class="text-muted mb-0">@dodoljohn</h6>
-                                    </div>
-                                </div>
+                                @endforeach
                                 <div class="px-4">
-                                    <button class='btn btn-block btn-xl btn-light-primary font-bold mt-3'>Start
-                                        Conversation</button>
+                                    <a href="{{ route('/players') }}" class='btn btn-block btn-xl btn-light-primary font-bold mt-3'>See Details</a>
                                 </div>
                             </div>
                         </div>

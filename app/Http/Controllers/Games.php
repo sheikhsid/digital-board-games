@@ -13,7 +13,7 @@ class Games extends Controller
 
     function seeGames(){
 
-        $games= Game::all()->where('status','on');
+        $games= Game::all()->where('status','on')->take(4);
 
         return view('/single',['games' => $games]);
 
@@ -34,6 +34,16 @@ class Games extends Controller
     }
     
     /*Admin Area*/
+
+    
+    function Dashboard(){
+
+        $games= Game::orderBy('id', 'desc')->get()->take(5)->sortBy('created_at');
+        $players= Player::orderBy('id', 'desc')->get()->take(5)->sortBy('created_at')->unique('ip_address');
+
+        return view('/home',['games' => $games, 'players' => $players]);
+
+    }
 
     function viewGames(){
 
