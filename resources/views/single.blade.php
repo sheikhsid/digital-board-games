@@ -45,7 +45,7 @@
                                 @csrf
                                 <input type="hidden" name="game_id" value="{{$game['id']}}"></br>
                                 <button type="submit" class="btn me-1 mb-1">
-                                    <img src="{{ asset('images/blank-img.jpg') }}" class="img-thumbnail">
+                                    <img src="{{ asset('images/uploads') }}/{{$game['thumbnail']}}" class="img-thumbnail" title="{{$game['name']}}">
                                 </button>
                                 </form>
                             </div>

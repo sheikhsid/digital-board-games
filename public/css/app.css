@@ -1289,11 +1289,14 @@ a {
     width: 100%;
 }a.cancel-icon {
     position: absolute;
-    bottom: 35px;
-    font-size: 58px;
-    height: 50px;
+    bottom: 18px;
+    font-size: 20px;
+    padding: 13px;
+    height: 60px;
     right: 6px;
     color: #d0d0d0;
-}a.cancel {
-    position: absolute;
+    background: #222;
+}a.cancel-icon i.bi {
+    position: relative;
+    top: 3px;
 }

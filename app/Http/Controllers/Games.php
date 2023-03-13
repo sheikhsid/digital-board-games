@@ -48,6 +48,7 @@ class Games extends Controller
         $req->validate([
             'name'=>'required | max:225',
             'iframe'=>'required | max:225',
+            'thumbnail'=>'required | max:225',
             'status'=>'max:225'
         ]);
 
@@ -55,7 +56,18 @@ class Games extends Controller
         $game->name=$req->name;
         $game->username=$req->username.'';
         $game->iframe=$req->iframe;
+        $game->thumbnail=$req->thumbnail;
         $game->status=$req->status.'';
+        $game->save();
+
+        return redirect('/games');
+
+    }
+
+    function Status(Request $req){
+
+        $game= Game::find($req->id);
+        $game->status=$req->status;
         $game->save();
 
         return redirect('/games');

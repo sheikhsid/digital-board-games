@@ -18,6 +18,7 @@ Route::get('/single',[Games::class,'seeGames'])->name('/single');
 Route::post("play",[Games::class,'addPlayer'])->name('play');
 
 Auth::routes();
+// Auth::routes(['register' => false]);
 
 
 Route::middleware('auth')->group(function () {
@@ -27,6 +28,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/games',[Games::class,'viewGames'])->name('/games');
     Route::post("game",[Games::class,'addGame'])->name('game');
+
+    Route::post("active",[Games::class,'Status'])->name('active');
 
 });
     

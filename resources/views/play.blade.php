@@ -32,8 +32,7 @@
         </style>
     </head>
     <body>
-        <a href="/single" class="cancel-icon"><i class="bi bi-x-circle"></i></a>
-        <a href="/single" class="cancel"><i class="bi bi-x-circle"></i></a>
+        <a href="/single" class="cancel-icon"><i class="bi bi-x-circle"></i> Annulla</a>
         <iframe src="{{$play['iframe']}}" title="" width="100%" style="height: 100%;"></iframe>
     </body>
 </html>

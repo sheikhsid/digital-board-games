@@ -11,6 +11,11 @@
 	 <!-- Some JS and styles -->
   </x-navigation>
         <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
             <div class="page-heading">
                 <div class="page-title">
                     <div class="row">
@@ -52,11 +57,11 @@
                                                             @error('name'){{$message}}@enderror
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3 col-12">
+                                                    <div class="col-md-2 col-12">
                                                         <div class="form-group has-icon-left">
                                                             <label for="email-id-icon">Username</label>
                                                             <div class="position-relative">
-                                                                <input type="text" class="form-control" placeholder="Username of the profile" id="first-name-icon" name="username">
+                                                                <input type="text" class="form-control" placeholder="Username of profile" id="first-name-icon" name="username">
                                                                 <div class="form-control-icon">
                                                                     <i class="bi bi-person"></i>
                                                                 </div>
@@ -64,7 +69,7 @@
                                                             @error('username'){{$message}}@enderror
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6 col-12">
+                                                    <div class="col-md-5 col-12">
                                                         <div class="form-group has-icon-left">
                                                             <label for="mobile-id-icon">Game URL*</label>
                                                             <div class="position-relative">
@@ -74,6 +79,18 @@
                                                                 </div>
                                                             </div>
                                                             @error('iframe'){{$message}}@enderror
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 col-12">
+                                                        <div class="form-group has-icon-left">
+                                                            <label for="mobile-id-icon">Game Thumbnail*</label>
+                                                            <div class="position-relative">
+                                                                <input type="text" class="form-control" placeholder="image.jpg" id="mobile-id-icon" name="thumbnail">
+                                                                <div class="form-control-icon">
+                                                                    <i class="bi bi-link-45deg"></i>
+                                                                </div>
+                                                            </div>
+                                                            @error('thumbnail'){{$message}}@enderror
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 col-12">
@@ -118,8 +135,21 @@
                                         <td>{{$game['name']}}</td>
                                         <td>{{$game['username']}}</td>
                                         <td><a href="{{$game['iframe']}}" target="_blank">Play</a></td>
-                                        <td>
-                                            <span class="badge bg-success">{{$game['status']}}</span>
+                                        <td>@if ($game['status'] == 'on')
+                                                <form method="POST" action="{{ route('active') }}">
+                                                @csrf
+                                                    <input type="hidden" name="id" value="{{$game['id']}}">
+                                                    <input type="hidden" name="status" value="0">
+                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Active</button>
+                                                </form>
+                                            @else
+                                                <form method="POST" action="{{ route('active') }}">
+                                                @csrf
+                                                    <input type="hidden" name="id" value="{{$game['id']}}">
+                                                    <input type="hidden" name="status" value="on">
+                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Inactive</button>
+                                                </form>
+                                            @endif
                                         </td>
                                         <td><a href=""><i class="bi bi-link-45deg"></i></a></td>
                                     </tr>
