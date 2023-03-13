@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
                             <h3>Players Area</h3>
-                            <p class="text-subtitle text-muted">You can list your game from here</p>
+                            <p class="text-subtitle text-muted">View list of players</p>
                         </div>
                         <div class="col-12 col-md-6 order-md-2 order-first">
                             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -80,7 +80,7 @@
                                                 @endif
                                             @endforeach
                                         </td>
-                                        <td>{{$player['ip_address']}}</td>
+                                        <td><a href="https://whatismyipaddress.com/ip/{{$player['ip_address']}}" target="_blank">{{$player['ip_address']}}</a></td>
                                         <td>{{$player['created_at']}}</td>
                                     </tr>
                                 @endforeach

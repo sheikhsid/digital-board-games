@@ -35,6 +35,13 @@
                             </a>
                         </li>
                         <li class="sidebar-item  ">
+                            <a href="https://wordwall.net/account/login" class='sidebar-link' target="_blank">
+                            <i class="bi bi-folder2-open"></i>
+                                <span>Create Game</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-item  ">
                             <a class='sidebar-link' href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="bi bi-power"></i>  <span>{{ __('Logout') }} </span>
                             </a>
