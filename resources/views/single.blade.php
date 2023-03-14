@@ -32,7 +32,7 @@
                 font-size: 80px;
             }
             .text-gray-600 {
-                font-size: 35px !important;
+                font-size: 30px !important;
             }
         </style>
     </head>
@@ -40,9 +40,9 @@
         <div class="col-md-6 col-12 offset-md-3">
             <div class="row">
                 <div class="col-md-12 col-12">
-                <div class="text-center boxes">
+                    <div class="text-center boxes">
                         <h1 class="error-title">Benvenuto</h1>
-                        <p class="fs-5 text-gray-600">Seleziona qualsiasi gioco</p>
+                        <p class="fs-5 text-gray-600">Seleziona un gioco</p>
                         <div class="row">
                         @foreach($games as $game)
                             <div class="col-md-6 col-6">
@@ -51,6 +51,7 @@
                                 <input type="hidden" name="game_id" value="{{$game['id']}}"></br>
                                 <button type="submit" class="btn me-1 mb-1">
                                     <img src="{{ asset('images/uploads') }}/{{$game['thumbnail']}}" class="img-thumbnail" title="{{$game['name']}}">
+                                    <span class="overlay">{{$game['name']}}</span>
                                 </button>
                                 </form>
                             </div>
@@ -60,6 +61,16 @@
                 </div>    
             </div>  
         </div>
+        <div class="container-fluid">
+            <div class="row footerx">
+                <div class="col-md-6 col-12">
+                    <img src="{{ asset('images/logo/ducato-logo.png') }}" class="logo">
+                </div>
+                <div class="col-md-6 col-12">
+                    
+                </div>
+            </div>
+        </div> 
         <script src="{{ asset('/sw.js') }}"></script>
         <script>
             if (!navigator.serviceWorker.controller) {

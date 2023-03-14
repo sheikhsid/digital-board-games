@@ -9,7 +9,7 @@ body {
 
 #auth #auth-right {
     height: 100%;
-    background: url(../../images/bg/4853433.jpg),linear-gradient(90deg,#2d499d,#3f5491)
+    background: url(../../images/bg/4853433.jpg),linear-gradient(90deg,#48574d,#252e28);
 }
 
 #auth #auth-left {
@@ -24,7 +24,7 @@ body {
 #auth #auth-left .auth-subtitle {
     font-size: 1.7rem;
     line-height: 2.5rem;
-    color: #a8aebb
+    color: #36423a;
 }
 
 #auth #auth-left .auth-logo {

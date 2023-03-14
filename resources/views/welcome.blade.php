@@ -29,7 +29,19 @@
                 margin: 0; 
                 height: 100%; 
                 overflow: hidden
-            }
+            }.container-fluid, .row {
+                height: 100%;
+            }.col-6 {
+                height: 50%;
+                padding: 0;
+            }iframe {
+                height: 100%;
+                border: 0;
+                border-top: 4px solid #48574d;
+                border-right: 3px solid #48574d;
+                border-left: 3px solid #48574d;
+                border-style: dashed;
+            }   
             @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
                 html {
                     transform: rotate(-90deg);
@@ -45,34 +57,20 @@
 
     </head>
     <body>
-        <div class="container-fluid" style="padding: 0;">
-            <div class="row h-100">
-                <div class="col-md-12 col-12">
-                    <div class="text-center main">
-                        <div class="row">
-                            <div class="col-md-6 col-6">
-                                <div class="row">
-                                    <iframe src="/single" height="1080" width="100%" title="Iframe Example" style="transform: rotate(180deg);"></iframe>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-6">
-                                <div class="row">
-                                    <iframe src="/single" height="1080" width="100%" title="Iframe Example" style="transform: rotate(180deg);"></iframe>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-6">
-                                <div class="row">
-                                    <iframe src="/single" height="1080" width="100%" title="Iframe Example"></iframe>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-6">
-                                <div class="row">
-                                    <iframe src="/single" height="1080" width="100%" title="Iframe Example"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-6">
+                    <iframe src="/single" width="100%" title="Iframe Example" style="transform: rotate(180deg);" style="height:100%;"></iframe>
+                </div>
+                <div class="col-md-6 col-6">
+                    <iframe src="/single" width="100%" title="Iframe Example" style="transform: rotate(180deg);" style="height:100%;"></iframe>
+                </div>
+                <div class="col-md-6 col-6" style="height: 50%;">
+                    <iframe src="/single" width="100%" title="Iframe Example" style="height:100%;"></iframe>
+                </div>
+                <div class="col-md-6 col-6" style="height: 50%;">
+                    <iframe src="/single" width="100%" title="Iframe Example" style="height:100%;"></iframe>
+                </div>
             </div>  
         </div>
 
